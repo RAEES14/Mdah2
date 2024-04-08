@@ -1,67 +1,128 @@
-
-		
-						
-						<!DOCTYPE html> 
-<html> 
-<style> 
- body {
-   margin: auto;
-    padding: 0;
-          background-image: linear-gradient(to right, #0C1818,#0C1818);
-          background-position: center;
-           position: relative;
-      font-family: sans-serif;
-                padding: 0px;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مشغل فيديو</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
   }
-</style> 
-<body> 
-<script src="https://cdn.radiantmediatechs.com/rmp/9.2.2/js/rmp.min.js"></script> 
-<div class="rmp-playlist-container"> 
-<div class="rmp-playlist-player-wrapper"> 
-<div id="rmpPlayer"> 
-</div></div></div> 
-<script> 
-var playlistData =  [ 
+  .video-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  video {
+    width: 100%;
+    border-radius: 10px;
+  }
+  .episodes-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  .episode-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border: 2px solid #666;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .episode-image {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  .episode-link {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    
+    width: 80%; /* جعل الزر يمتد على طول المستطيل */
+ height: auto;
+   background-color: #04141b;
+    border-radius: 9px;
+    transition: background-color 0.3s ease;
+  }
+  .episode-link:hover {
+    background-color: #888;
+  }
+  
+  .grid1-container > div {
+		background-color: #0a0a0f;
+		height: 45px;
+	  border-radius: 1px 1px 40px 40px;
+      border: 0px solid black;
+      text-align: center;
+     font-size: 14px;
+      margin-top: 1px;
+      color: white;
+      font-family: "Airarabia", Sans-serif;
+	  font-weight: bold;
+}
 
+	
+h1 {
+  text-align: center;
+	margin-top: 1px;
+	font-weight: bold;
+}
+	
+h2 {
+	text-align: center;
+	margin-top: 0.5px;
+	font-size: 12px;
+	color: white;
+	font-family: "Airarabia", Sans-serif;
+	font-weight: bold;
+	}
+</style>
+</head>
+<body>
+	
+	
+	
+	<h1>testament : the story of moses</h1></div>
+	
+	
+	
+<div class="video-container">
+  <video controls id="video-player">
+    <source src="your_video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <ul class="episodes-list">
+    <li class="episode-item" style="border-color: #04141b;">
+      <img src="https://www.faselhd.link/wp-content/uploads/2024/03/38d979b685bbbe6bdf4c21a557eb3110-400x600.jpg" alt="Episode 1" class="episode-image">
+      <a href="#" class="episode-link" onclick="changeVideo('https://r465--1pqdyczv.c.scdns.io/stream/v1/hls/8L5WmiOMrvyBjv2vLFqqLQ/1712001257/www.faselhd.link/all/102.219.179.108/no/TN/0/01-02/1/cc370d13e7a482d16a386a99626a2e9a/140_sd360b_playlist.m3u8?mp4')">الحلقة الأولى ▶️</a>
+    </li>
+    <li class="episode-item" style="border-color: #04141b;">
+      <img src="https://www.faselhd.link/wp-content/uploads/2024/03/38d979b685bbbe6bdf4c21a557eb3110-400x600.jpg" alt="Episode 2" class="episode-image">
+      <a href="#" class="episode-link" onclick="changeVideo('https://r465--8katnn5p.c.scdns.io/stream/v1/hls/x-LqR-LWBy_AuyTxO6KoDQ/1711996282/www.faselhd.link/all/102.219.179.108/no/TN/0/08-02/4/44343781ca5bb861315cf26ebf9fae93/140_sd360b_playlist.m3u8?mp4')">الحلقة الثانية ▶️</a>
+    </li>
+    <li class="episode-item" style="border-color: #04141b;">
+      <img src="https://www.faselhd.link/wp-content/uploads/2024/03/38d979b685bbbe6bdf4c21a557eb3110-400x600.jpg" alt="Episode 3" class="episode-image">
+      <a href="#" class="episode-link" onclick="changeVideo('https://r465--5z6nc80t.c.scdns.io/stream/v1/hls/F3w9xpAIpkkRb0imNufo9Q/1711996254/www.faselhd.link/all/102.219.179.108/no/TN/0/05-02/1/231f9be5dddfc8e60dd271bca493558b/140_sd360b_playlist.m3u8?mp4')">الحلقة الثالثة ▶️</a>
+    </li>
+    
+    <!-- Add more episodes as needed -->
+  </ul>
+</div>
 
-
-
-{ src: { mp4: ["https://s211d1.downet.net/download/1712545928/66120f0844dc6/Al.Maddah.Ostouret.Al.Wadi.S02.E01.1080P.WEB-DL.AKWAM.mp4"] }, "contentMetadata":
- { "title": "الحلقة 1", "description": "", "thumbnail":"https://i.ibb.co/RGXCctt/Picsart-24-04-06-07-12-57-908.jpg", "poster": [ "" ] },},  
-
-{ src: { mp4: ["https://cdn-cached-fs-45-w.dailymotians.cam/hls/liwaoxqvl42nsti77efsuwybubfdig7wsy2ry24ec,aegbyggi4umrxsepb3q,jswbyggi4uhineznf3q,.urlset/master.m3u8"] }, "contentMetadata": 
-{ "title": "الحلقة 2", "description": "", "thumbnail":"https://i.ibb.co/RGXCctt/Picsart-24-04-06-07-12-57-908.jpg", "poster": [ "" ] },},  
-
-{ src: { mp4: ["https://s211d1.downet.net/download/1712546880/661212c0af6f2/Al.Maddah.Ostouret.Al.Wadi.S02.E03.720P.WEB-DL.AKWAM.mp4"] }, "contentMetadata":
- { "title": "الحلقة 3", "description": "", "thumbnail":"https://i.ibb.co/RGXCctt/Picsart-24-04-06-07-12-57-908.jpg", "poster": [ "" ] },},  
-
-{ src: { mp4: ["https://s211d1.downet.net/download/1712546983/661213276dc2b/Al.Maddah.Ostouret.Al.Wadi.S02.E04.1080P.WEB-DL.AKWAM.mp4"] }, "contentMetadata":
- { "title": "الحلقة 4", "description": "", "thumbnail":"https://i.ibb.co/RGXCctt/Picsart-24-04-06-07-12-57-908.jpg", "poster": [ "" ] },},  
-
-
-];var settings = { 
-licenseKey: 'Kl8lbz16cz1rN2l2enM9Z2M9NnZvMnllaT9yb201ZGFzaXMzMGRiMEElXyo=', 
-quickRewind: 10,quickForward: 10, 
-speed: true, 
-speedRates: [0.25, 0.5, 1, 1.5, 2, 4], 
-skin: 's4', 
-scaleMode: 'stretch', 
-posterScaleMode: 'flatten', 
-skinBackgroundColor: '0C1818', 
-skinButtonColor: 'FFFFFF', 
-skinAccentColor: 'F71810', 
-automaticFullscreenOnLandscape: true, 
-preload: 'auto', 
-playlistUpNextAutoplay: true, 
-playlistEndedLoop: false, 
-playlistData: playlistData }; 
-var elementID = 'rmpPlayer'; 
-var rmp = new RadiantMP(elementID); 
-rmp.init(settings); 
-</script> 
-</body> 
+<script>
+function changeVideo(videoSource) {
+  var videoPlayer = document.getElementById("video-player");
+  videoPlayer.src = videoSource;
+  videoPlayer.play();
+}
+</script>
+</body>
 </html>
-				
-											
-											
-									
